@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Jquery - todo: download and use locally -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Start of bootstrap integration -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css" >
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!-- End of bootstrap integration -->
+
+
+
+    <script type="text/javascript">
+      function mouseOverEvent(area) {
+        // $("#darkImage").addClass("opaque");
+        $("#" + area).addClass("opaque");
+        // $("#cf7 img").not("#" + area).not("#darkImage").removeClass("opaque");
+      }
+
+      function mouseOutEvent(area) {
+        $("#" + area).removeClass("opaque");
+
+        // $("#darkImage").addClass("opaque");
+        // $("#cf7 img").not("#darkImage").removeClass("opaque");
+      }
+
+
+    </script>
+</head>
+
+<body>
+  <div class="col-xs-12 col-md-12">
+
+    <div id="cf7" >
+      <img
+       id="darkImage"
+       src="dark.png"
+       border="0"
+       usemap="#image-maps"
+       style="margin: 0 auto;"
+       alt=""
+       class="opaque center-block"
+       />
+       <img
+        id="closetImage"
+        src="closet.png"
+        border="0"
+        usemap="#image-maps"
+        style="margin: 0 auto;"
+        alt=""
+        class="center-block"
+        />
+        <img
+          id="paintingsImage"
+          src="paintings.png"
+          border="0"
+          usemap="#image-maps"
+          style="margin: 0 auto;"
+          alt=""
+          class="center-block"
+        />
+        <img
+         id="canvasImage"
+         src="canvas.png"
+         border="0"
+         usemap="#image-maps"
+         style="margin: 0 auto;"
+         alt=""
+         class="center-block"
+         />
+        <img
+          id="sculptureImage"
+          src="sculpture.png"
+          border="0"
+          usemap="#image-maps"
+          style="margin: 0 auto;"
+          alt=""
+          class="center-block"
+         />
+         <img
+           id="deskImage"
+           src="desk.png"
+           border="0"
+           usemap="#image-maps"
+           style="margin: 0 auto;"
+           alt=""
+           class="center-block"
+          />
+
+    </div>
+  </div>
+  <map name="image-maps" id="ImageMapsCom-image-maps-2016-07-21-194648">
+      <area
+        shape="rect"
+        coords="5182,3454,5184,3456"
+        alt="Image Map"
+        style="outline:none;"
+        title="Image Map"
+      />
+      <area
+        alt=""
+        title="closet"
+        shape="poly"
+        coords="3300,2116,3324,12,5180,12,5176,2480"
+        style="outline:none;"
+        target="_self"
+        onmouseover="mouseOverEvent('closetImage')"
+        onmouseout="mouseOutEvent('closetImage')"
+      />
+      <area
+        alt="Sculpture"
+        title="Sculpture"
+        shape="poly"
+        coords="20,1972,732,1944,852,3460,12,3440"
+        style="outline:none;"
+        target="_self"
+        onmouseover="mouseOverEvent('sculptureImage')"
+        onmouseout="mouseOutEvent('sculptureImage')"
+
+      />
+      <area id="canvas"
+        alt=""
+        title="canvas"
+        shape="poly"
+        coords="2024,1584,1844,1752,2432,1060,3276,1416,3304,2416,2888,2948,1784,2836,1856,1740"
+        style="outline:none;"
+        target="_self"
+        onmouseover="mouseOverEvent('canvasImage')"
+        onmouseout="mouseOutEvent('canvasImage')"
+
+      />
+      <area id="desk"
+        alt=""
+        title="desk"
+        shape="poly"
+        coords="616,1444,592,1656,784,1904,816,2472,1312,2412,1580,2424,1752,1852,1736,1468,1712,1364,1060,1364"
+        style="outline:none;"
+        target="_self"
+        onmouseover="mouseOverEvent('deskImage')"
+        onmouseout="mouseOutEvent('deskImage')"
+
+      />
+      <area
+        alt=""
+        title="paintings"
+        shape="poly"
+        coords="20,1340,1860,1344,1936,4,16,4"
+        style="outline:none;"
+        target="_self"
+        onmouseover="mouseOverEvent('paintingsImage')"
+        onmouseout="mouseOutEvent('paintingsImage')"
+
+      />
+  </map>
+
+	<script type="text/javascript" src="imageMapResizer.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('map').imageMapResize();
+    });
+    // function switch() {
+    //   $("#cf2 img.top").toggleClass("transparent");
+    // });
+
+  </script>
+</body>
+
+</html>
