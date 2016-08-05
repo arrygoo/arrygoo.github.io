@@ -10,25 +10,27 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css" >
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <!-- End of bootstrap integration -->
+  <link rel="stylesheet" href="fullsizeable/css/jquery-fullsizable.css">
+  <link rel="stylesheet" href="fullsizeable/css/jquery-fullsizable-theme.css">
+  <script src="https://cdn.rawgit.com/mattbryson/TouchSwipe-Jquery-Plugin/1.6.6/jquery.touchSwipe.min.js"></script>
+  <script src="fullsizeable/js/jquery-fullsizable.min.js"></script>
 
 
 
     <script type="text/javascript">
       function mouseOverEvent(area) {
-        // $("#darkImage").addClass("opaque");
         $("#" + area).addClass("opaque");
-        // $("#cf7 img").not("#" + area).not("#darkImage").removeClass("opaque");
       }
-
       function mouseOutEvent(area) {
         $("#" + area).removeClass("opaque");
-
-        // $("#darkImage").addClass("opaque");
-        // $("#cf7 img").not("#darkImage").removeClass("opaque");
+      }
+      function mouseClickEvent(area) {
+        $("#GSCCModal").modal('show');
       }
 
 
@@ -37,6 +39,85 @@
 
 <body>
   <div class="col-xs-12 col-md-12">
+
+  <div id="GSCCModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;  </button>
+            <h1 class="modal-title" id="myModalLabel">Drawings</h4>
+          </div>
+          <div class="modal-body">
+            <div class="my-gallery">
+              <a href="1.jpeg">
+                <img title="Locomotives Roundhouse"
+                      alt="Steam locomotives of the Chicago &amp; North Western Railway."
+                      class="imageList"
+                      src="drawings/1.jpeg">
+              </a>
+              <div>
+                <b>Vincent van Gogh</b>
+                <br/>
+                The Starry Night, 1889
+                <br/>
+                Oil on canvas
+                <br/>
+                73.7 cm × 92.1 cm (29 in × 36¼ in)
+              </div>
+              <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/>
+              <a href="drawings/2.jpeg">
+                <img title="Icebergs in the High Arctic"
+                      alt="The debris loading isn't particularly extensive, but the color is usual."
+                      class="imageList"
+                      src="drawings/2.jpeg">
+              </a>
+              <div>
+                <b>Vincent van Gogh</b>
+                <br/>
+                The Starry Night, 1889
+                <br/>
+                Oil on canvas
+                <br/>
+                73.7 cm × 92.1 cm (29 in × 36¼ in)
+              </div>
+              <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/>
+              <a href="drawings/3.jpeg">
+                <img title="Araña"
+                      alt="Xysticus cristatus, A Estrada, Galicia, Spain"
+                      class="imageList"
+                      src="drawings/3.jpeg">
+              </a>
+              <div>
+                <b>Vincent van Gogh</b>
+                <br/>
+                The Starry Night, 1889
+                <br/>
+                Oil on canvas
+                <br/>
+                73.7 cm × 92.1 cm (29 in × 36¼ in)
+              </div>
+              <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/>
+              <a href="drawings/4.jpeg">
+                <img title="Araña"
+                      alt="Xysticus cristatus, A Estrada, Galicia, Spain"
+                      class="imageList"
+                      src="drawings/4.jpeg">
+              </a>
+              <div>
+                <b>Vincent van Gogh</b>
+                <br/>
+                The Starry Night, 1889
+                <br/>
+                Oil on canvas
+                <br/>
+                73.7 cm × 92.1 cm (29 in × 36¼ in)
+              </div>
+              <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="cf7" >
       <img
@@ -57,43 +138,42 @@
         alt=""
         class="center-block"
         />
-        <img
-          id="paintingsImage"
-          src="paintings.png"
-          border="0"
-          usemap="#image-maps"
-          style="margin: 0 auto;"
-          alt=""
-          class="center-block"
-        />
-        <img
-         id="canvasImage"
-         src="canvas.png"
+      <img
+        id="paintingsImage"
+        src="paintings.png"
+        border="0"
+        usemap="#image-maps"
+        style="margin: 0 auto;"
+        alt=""
+        class="center-block"
+      />
+      <img
+       id="canvasImage"
+       src="canvas.png"
+       border="0"
+       usemap="#image-maps"
+       style="margin: 0 auto;"
+       alt=""
+       class="center-block"
+       />
+      <img
+        id="sculptureImage"
+        src="sculpture.png"
+        border="0"
+        usemap="#image-maps"
+        style="margin: 0 auto;"
+        alt=""
+        class="center-block"
+       />
+       <img
+         id="deskImage"
+         src="desk.png"
          border="0"
          usemap="#image-maps"
          style="margin: 0 auto;"
          alt=""
          class="center-block"
-         />
-        <img
-          id="sculptureImage"
-          src="sculpture.png"
-          border="0"
-          usemap="#image-maps"
-          style="margin: 0 auto;"
-          alt=""
-          class="center-block"
-         />
-         <img
-           id="deskImage"
-           src="desk.png"
-           border="0"
-           usemap="#image-maps"
-           style="margin: 0 auto;"
-           alt=""
-           class="center-block"
-          />
-
+        />
     </div>
   </div>
   <map name="image-maps" id="ImageMapsCom-image-maps-2016-07-21-194648">
@@ -123,7 +203,6 @@
         target="_self"
         onmouseover="mouseOverEvent('sculptureImage')"
         onmouseout="mouseOutEvent('sculptureImage')"
-
       />
       <area id="canvas"
         alt=""
@@ -134,7 +213,6 @@
         target="_self"
         onmouseover="mouseOverEvent('canvasImage')"
         onmouseout="mouseOutEvent('canvasImage')"
-
       />
       <area id="desk"
         alt=""
@@ -156,7 +234,7 @@
         target="_self"
         onmouseover="mouseOverEvent('paintingsImage')"
         onmouseout="mouseOutEvent('paintingsImage')"
-
+        onclick="mouseClickEvent('closetImage')"
       />
   </map>
 
@@ -164,6 +242,24 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('map').imageMapResize();
+
+      $('a').fullsizable({
+        detach_id: 'container'
+      });
+      $(document).on('fullsizable:opened', function(){
+        $("#jquery-fullsizable").swipe({
+          swipeLeft: function(){
+            $(document).trigger('fullsizable:next')
+          },
+          swipeRight: function(){
+            $(document).trigger('fullsizable:prev')
+          },
+          swipeUp: function(){
+            $(document).trigger('fullsizable:close')
+          }
+        });
+      });
+
     });
     // function switch() {
     //   $("#cf2 img.top").toggleClass("transparent");

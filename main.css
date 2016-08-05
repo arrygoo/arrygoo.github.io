@@ -28,3 +28,11 @@ p#cf7_controls {
   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=1);
 }
+
+.imageList {
+  width: 100%;
+}
+
+#jquery-fullsizable {
+  z-index: 1600 !important;
+}
