@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css" >
   <script src="http://www.w3schools.com/lib/w3data.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.4.4/babel.min.js"></script>
+
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -19,9 +21,7 @@
   <link rel="stylesheet" href="fullsizeable/css/jquery-fullsizable-theme.css">
   <script src="https://cdn.rawgit.com/mattbryson/TouchSwipe-Jquery-Plugin/1.6.6/jquery.touchSwipe.min.js"></script>
   <script src="fullsizeable/js/jquery-fullsizable.min.js"></script>
-
-
-
+  <script src="  https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
     <script type="text/javascript">
       function mouseOverEvent(area) {
         $("#" + area).addClass("opaque");
@@ -29,8 +29,8 @@
       function mouseOutEvent(area) {
         $("#" + area).removeClass("opaque");
       }
-      function mouseClickEvent(area) {
-        $("#GSCCModal").modal('show');
+      function openModal(modalName) {
+        $("#" + modalName).modal('show');
       }
 
 
@@ -40,7 +40,39 @@
 <body>
   <div class="col-xs-12 col-md-12">
 
-  <div id="GSCCModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div id="animationModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;  </button>
+            <h1 class="modal-title" id="myModalLabel">Animations</h4>
+          </div>
+          <div class="modal-body">
+            <div class="my-gallery">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/VAQbOyjQH34"
+                frameborder="0"
+                allowfullscreen>
+              </iframe>
+              <div>
+                <b>Ghazal Tahernia</b>
+                <br/>
+                Red, 2016
+                <br/>
+                Clay - Stop Motion
+                <br/>
+                This video is inspired my personal experiences, and how it lead me to immigrate at the end.
+              </div>
+              <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div id="paintingModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
      <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -49,70 +81,7 @@
           </div>
           <div class="modal-body">
             <div class="my-gallery">
-              <a href="10.jpeg">
-                <img title="Locomotives Roundhouse"
-                      alt="Steam locomotives of the Chicago &amp; North Western Railway."
-                      class="imageList"
-                      src="drawings/10.jpeg">
-              </a>
-              <div>
-                <b>Vincent van Gogh</b>
-                <br/>
-                The Starry Night, 1889
-                <br/>
-                Oil on canvas
-                <br/>
-                73.7 cm × 92.1 cm (29 in × 36¼ in)
-              </div>
-              <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/>
-              <a href="drawings/2.jpeg">
-                <img title="Icebergs in the High Arctic"
-                      alt="The debris loading isn't particularly extensive, but the color is usual."
-                      class="imageList"
-                      src="drawings/2.jpeg">
-              </a>
-              <div>
-                <b>Vincent van Gogh</b>
-                <br/>
-                The Starry Night, 1889
-                <br/>
-                Oil on canvas
-                <br/>
-                73.7 cm × 92.1 cm (29 in × 36¼ in)
-              </div>
-              <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/>
-              <a href="drawings/3.jpeg">
-                <img title="Araña"
-                      alt="Xysticus cristatus, A Estrada, Galicia, Spain"
-                      class="imageList"
-                      src="drawings/3.jpeg">
-              </a>
-              <div>
-                <b>Vincent van Gogh</b>
-                <br/>
-                The Starry Night, 1889
-                <br/>
-                Oil on canvas
-                <br/>
-                73.7 cm × 92.1 cm (29 in × 36¼ in)
-              </div>
-              <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/>
-              <a href="drawings/4.jpeg">
-                <img title="Araña"
-                      alt="Xysticus cristatus, A Estrada, Galicia, Spain"
-                      class="imageList"
-                      src="drawings/4.jpeg">
-              </a>
-              <div>
-                <b>Vincent van Gogh</b>
-                <br/>
-                The Starry Night, 1889
-                <br/>
-                Oil on canvas
-                <br/>
-                73.7 cm × 92.1 cm (29 in × 36¼ in)
-              </div>
-              <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/>
+
             </div>
           </div>
         </div>
@@ -213,6 +182,7 @@
         target="_self"
         onmouseover="mouseOverEvent('canvasImage')"
         onmouseout="mouseOutEvent('canvasImage')"
+        onclick="openModal('animationModal')"
       />
       <area id="desk"
         alt=""
@@ -234,15 +204,66 @@
         target="_self"
         onmouseover="mouseOverEvent('paintingsImage')"
         onmouseout="mouseOutEvent('paintingsImage')"
-        onclick="mouseClickEvent('closetImage')"
+        onclick="openModal('paintingModal')"
       />
   </map>
 
 	<script type="text/javascript" src="imageMapResizer.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-      $('map').imageMapResize();
+      let drawings = [
+        {
+          imgUrl: 'drawings/1.jpeg'
+          title: 'Drawing 1',
+          lines: ['line1', 'line2', 'line3']
+        },
 
+      ];
+      let imgs = [];
+
+      drawings.forEach(drawing => {
+        let img = $(` \
+          <a href="${drawing.imgUrl}">
+            <img title="${drawing.title}"
+                  alt="${drawing.title}"
+                  class="imageList"
+                  src=${drawing.imgUrl}>
+          </a>
+          <div>
+            <b>${drawing.title}</b>
+            <br/>
+            ${drawing.lines[0]}
+            <br/>
+            ${drawing.lines[1]}
+            <br/>
+            ${drawing.lines[2]}
+          </div>
+          <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/>
+        `);
+
+      })
+
+      // let img = $(' \
+      //   <a href="drawings/1.jpeg"> \
+      //     <img title="Icebergs in the High Arctic" \
+      //           alt="The debris loading isn\'t particularly extensive, but the color is usual." \
+      //           class="imageList" \
+      //           src="drawings/1.jpeg"> \
+      //   </a> \
+      //   <div> \
+      //     <b>Vincent van Gogh</b> \
+      //     <br/> \
+      //     The Starry Night, 1889 \
+      //     <br/> \
+      //     Oil on canvas \
+      //     <br/> \
+      //     73.7 cm × 92.1 cm (29 in × 36¼ in) \
+      //   </div> \
+      //   <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/> \
+      // ');
+
+      $('.my-gallery').append(img)
+      $('map').imageMapResize();
       $('a').fullsizable({
         detach_id: 'container'
       });
@@ -261,10 +282,6 @@
       });
 
     });
-    // function switch() {
-    //   $("#cf2 img.top").toggleClass("transparent");
-    // });
-
   </script>
 </body>
 
