@@ -80,7 +80,7 @@
             <h1 class="modal-title" id="myModalLabel">Drawings</h4>
           </div>
           <div class="modal-body">
-            <div class="my-gallery">
+            <div id="paintingModalBody" class="my-gallery">
 
             </div>
           </div>
@@ -213,56 +213,87 @@
     $(document).ready(function() {
       let drawings = [
         {
-          imgUrl: 'drawings/1.jpeg'
-          title: 'Drawing 1',
-          lines: ['line1', 'line2', 'line3']
+          imgUrl: 'drawings/1.jpeg',
         },
-
+        {
+          imgUrl: 'drawings/2.jpeg',
+        },
+        {
+          imgUrl: 'drawings/3.jpeg',
+        },
+        {
+          imgUrl: 'drawings/4.jpeg',
+        },
+        {
+          imgUrl: 'drawings/5.jpeg',
+        },
+        {
+          imgUrl: 'drawings/6.jpeg',
+        },
+        {
+          imgUrl: 'drawings/7.jpeg',
+        },
+        {
+          imgUrl: 'drawings/8.jpeg',
+        },
+        {
+          imgUrl: 'drawings/9.jpeg',
+        },
+        {
+          imgUrl: 'drawings/10.jpeg',
+        },
+        {
+          imgUrl: 'drawings/11.jpeg',
+        },
+        {
+          imgUrl: 'drawings/12.jpeg',
+        },
+        {
+          imgUrl: 'drawings/13.jpeg',
+        },
+        {
+          imgUrl: 'drawings/14.jpeg',
+        },
+        {
+          imgUrl: 'drawings/15.jpeg',
+        },
+        {
+          imgUrl: 'drawings/16.jpeg',
+        },
+        {
+          imgUrl: 'drawings/17.jpeg',
+        },
+        {
+          imgUrl: 'drawings/18.jpeg',
+        },
       ];
-      let imgs = [];
+      let imgsTag = [];
 
       drawings.forEach(drawing => {
         let img = $(` \
           <a href="${drawing.imgUrl}">
-            <img title="${drawing.title}"
-                  alt="${drawing.title}"
+            <img title="${drawing.title || ''}"
+                  alt="${drawing.title || ''}"
                   class="imageList"
                   src=${drawing.imgUrl}>
           </a>
           <div>
-            <b>${drawing.title}</b>
             <br/>
-            ${drawing.lines[0]}
+            <b>${drawing.title || ''}</b>
             <br/>
-            ${drawing.lines[1]}
+            ${drawing.lines && drawing.lines[0] || ''}
             <br/>
-            ${drawing.lines[2]}
+            ${drawing.lines && drawing.lines[1] || ''}
+            <br/>
+            ${drawing.lines && drawing.lines[2] || ''}
           </div>
           <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/>
         `);
+        imgsTag.push(img);
 
       })
 
-      // let img = $(' \
-      //   <a href="drawings/1.jpeg"> \
-      //     <img title="Icebergs in the High Arctic" \
-      //           alt="The debris loading isn\'t particularly extensive, but the color is usual." \
-      //           class="imageList" \
-      //           src="drawings/1.jpeg"> \
-      //   </a> \
-      //   <div> \
-      //     <b>Vincent van Gogh</b> \
-      //     <br/> \
-      //     The Starry Night, 1889 \
-      //     <br/> \
-      //     Oil on canvas \
-      //     <br/> \
-      //     73.7 cm × 92.1 cm (29 in × 36¼ in) \
-      //   </div> \
-      //   <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/> \
-      // ');
-
-      $('.my-gallery').append(img)
+      $('#paintingModalBody').append(imgsTag)
       $('map').imageMapResize();
       $('a').fullsizable({
         detach_id: 'container'
