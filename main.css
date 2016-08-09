@@ -36,3 +36,15 @@ p#cf7_controls {
 #jquery-fullsizable {
   z-index: 1600 !important;
 }
+
+#warning-message { display: none; }
+@media only screen and (orientation:portrait){
+    #wrapper { display:none; }
+    #warning-message {
+      display:block;
+      font-size: 500%;
+    }
+}
+@media only screen and (orientation:landscape){
+    #warning-message { display:none; }
+}
