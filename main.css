@@ -75,3 +75,7 @@ img.bg {
 .noPadding {
   padding: 0;
 }
+
+body {
+  background-color: #070802;
+}
