@@ -11,6 +11,4 @@ $(document).ready(function() {
   function openModal(modalName) {
     $("#" + modalName).modal('show');
   }
-
-s
 });
