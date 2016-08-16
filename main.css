@@ -25,6 +25,10 @@ p#cf7_controls {
 
 #cf7 img.opaque {
   opacity:1;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity  0.3s ease;
+  -o-transition: opacity  0.3s ease;
+  transition: opacity  0.3s ease;
   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=1);
 }
