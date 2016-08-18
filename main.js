@@ -19,6 +19,6 @@ $(document).ready(function() {
 
   setTimeout(function() {
     $('#overlay, #overlay-back').fadeOut(2000);
-  }, 2000)
+  }, 2500)
 
 });
