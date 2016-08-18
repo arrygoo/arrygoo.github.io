@@ -11,4 +11,14 @@ $(document).ready(function() {
   function openModal(modalName) {
     $("#" + modalName).modal('show');
   }
+
+  // Welcome message:
+  $('#overlay, #overlay-back').on('click', function () {
+    $('#overlay, #overlay-back').fadeOut(500);
+  });
+
+  setTimeout(function() {
+    $('#overlay, #overlay-back').fadeOut(2000);
+  }, 2000)
+
 });
