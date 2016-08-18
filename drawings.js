@@ -61,23 +61,25 @@ $(document).ready(function() {
 
   drawings.forEach(drawing => {
     let img = $(` \
-      <a href="${drawing.imgUrl}">
-        <img title="${drawing.title || ''}"
-              alt="${drawing.title || ''}"
-              class="imageList"
-              src=${drawing.imgUrl}>
-      </a>
       <div>
-        <br/>
-        <b>${drawing.title || ''}</b>
-        <br/>
-        ${drawing.lines && drawing.lines[0] || ''}
-        <br/>
-        ${drawing.lines && drawing.lines[1] || ''}
-        <br/>
-        ${drawing.lines && drawing.lines[2] || ''}
+        <a href="${drawing.imgUrl}">
+          <img title="${drawing.title || ''}"
+                alt="${drawing.title || ''}"
+                class="imageList"
+                src=${drawing.imgUrl}>
+        </a>
+        <div>
+          <!--br/-->
+          <b>${drawing.title || ''}</b>
+          <!--br/-->
+          ${drawing.lines && drawing.lines[0] || ''}
+          <!--br/-->
+          ${drawing.lines && drawing.lines[1] || ''}
+          <!--br/-->
+          ${drawing.lines && drawing.lines[2] || ''}
+        </div>
+        <hr style="width: 50%; margin: 50px 0 50px 0  auto; text-align:center;"/>
       </div>
-      <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/>
     `);
     imgsTag.push(img);
 

@@ -10,12 +10,14 @@
   <!-- Start of bootstrap integration -->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css" >
   <script src="http://www.w3schools.com/lib/w3data.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.4.4/babel.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.min.js"></script>
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -62,7 +64,7 @@
                 frameborder="0"
                 allowfullscreen>
               </iframe>
-              <div>
+              <h1>
                 <b>Ghazal Tahernia</b>
                 <br/>
                 Red, 2016
@@ -70,13 +72,48 @@
                 Clay - Stop Motion
                 <br/>
                 <!-- This video is inspired my personal experiences, and how it lead me to immigrate at the end. -->
-              </div>
-              <hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/>
+              </h1>
+              <!-- hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/ -->
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div id="closetModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+       <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;  </button>
+              <h1 class="modal-title" id="myModalLabel">Ghazal Tahernia</h4>
+            </div>
+            <div class="modal-body">
+              <div class="my-gallery">
+                <h1 style="line-height: 1.5em;">
+                  <img style="width: 100%" src="assets/bio.jpg" />
+                  <br/>
+
+                  <b>Hi! My name is Ghazal. I design, draw, and create claymations.</b>
+                  <a href="assets/resume.pdf" target="_blank">
+                  <br/>
+                  Check out my resume here! <i class="fa fa-envelope-o" aria-hidden="true"></i> </a>
+                  <br/>
+                  <br/>
+                  Email:  ghazal.handicrafts@gmail.com
+                  <br/>
+                  Phone: <a href="tel:416-277-1279">416-277-1279</a>
+                  <br/>
+                  Facebook: <a href="https://www.facebook.com/NielloArtGallery/"> NielloArtGallery </a>
+
+
+                  <!-- This video is inspired my personal experiences, and how it lead me to immigrate at the end. -->
+                </h1>
+                <!-- hr style="width: 50%; margin: 50px 0 50px 0 auto; text-align:center;"/ -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
   <div id="paintingModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
      <div class="modal-dialog">
@@ -168,6 +205,8 @@
         target="_self"
         onmouseover="mouseOverEvent('closetImage')"
         onmouseout="mouseOutEvent('closetImage')"
+        onclick="openModal('closetModal')"
+
       />
       <area
         alt="Sculpture"

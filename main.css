@@ -41,6 +41,10 @@ p#cf7_controls {
   z-index: 1600 !important;
 }
 
+body {
+  font-family: 'Sue Ellen Francisco', serif;
+}
+
 #warning-message { display: none; }
 @media only screen and (orientation:portrait){
     #wrapper { display:none; }
@@ -109,10 +113,13 @@ img.bg {
 
 .welcomeMessage {
   /*font: 400 9.5em/125% 'Gochi+Hand', Helvetica, Sans-serif;*/
-  font-family: 'Sue Ellen Francisco', serif;
   font-size: 8em;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+}
+
+.modal-title {
+   font-size: 5em;
 }
