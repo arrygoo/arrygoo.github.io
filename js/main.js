@@ -13,15 +13,24 @@ $(document).ready(function () {
   }
 
   function enteredWebsite() {
-    $("#overlay, #overlay-back").fadeOut(2000);
+    $("#cf7").imagesLoaded(function () {
+    // images have loaded
+      $("#loading").fadeOut(100);
+      $("#overlay, #overlay-back").fadeOut(2000);
+      $("#practicesModalBody").append(practicesImgsTag);
+      $("#sculptureModalBody").append(drawingsImgsTag);
+      $("#paintingModalBody").append(scultptureImgsTag);
+    });
   }
+
+  $("#cf7").imagesLoaded(function () {
+  // images have loaded
+    $("#loading").fadeOut(100);
+  });
 
   // Welcome message:
   $("#overlay, #overlay-back").on("click", function () {
     enteredWebsite();
-    $("#practicesModalBody").append(practicesImgsTag);
-    $("#sculptureModalBody").append(drawingsImgsTag);
-    $("#paintingModalBody").append(scultptureImgsTag);
   });
 
   setTimeout(function () {
