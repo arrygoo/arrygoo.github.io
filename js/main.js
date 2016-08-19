@@ -18,8 +18,8 @@ $(document).ready(function () {
       $("#loading").fadeOut(100);
       $("#overlay, #overlay-back").fadeOut(2000);
       $("#practicesModalBody").append(practicesImgsTag);
-      $("#sculptureModalBody").append(drawingsImgsTag);
-      $("#paintingModalBody").append(scultptureImgsTag);
+      $("#sculptureModalBody").append(scultptureImgsTag);
+      $("#paintingModalBody").append(drawingsImgsTag);
     });
   }
 
