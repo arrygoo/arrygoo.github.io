@@ -38,6 +38,24 @@ $(document).ready(function () {
     {
       imgUrl: "sculptures/12.jpeg",
     },
+    {
+      imgUrl: "sculptures/13.jpeg",
+    },
+    {
+      imgUrl: "sculptures/14.jpeg",
+    },
+    {
+      imgUrl: "sculptures/15.jpeg",
+    },
+    {
+      imgUrl: "sculptures/16.jpeg",
+    },
+    {
+      imgUrl: "sculptures/17.jpeg",
+    },
+    {
+      imgUrl: "sculptures/18.jpeg",
+    },
   ];
   let imgsTag = [];
 

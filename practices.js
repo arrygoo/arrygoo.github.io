@@ -20,24 +20,6 @@ $(document).ready(function () {
     {
       imgUrl: "practices/6.jpg",
     },
-    {
-      imgUrl: "practices/7.jpg",
-    },
-    {
-      imgUrl: "practices/8.jpg",
-    },
-    {
-      imgUrl: "practices/9.jpg",
-    },
-    {
-      imgUrl: "practices/10.jpg",
-    },
-    {
-      imgUrl: "practices/11.jpg",
-    },
-    {
-      imgUrl: "practices/12.jpg",
-    },
   ];
   let imgsTag = [];
 
