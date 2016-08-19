@@ -1,65 +1,47 @@
 
 $(document).ready(function () {
   "use strict";
-  let drawings = [
+  let practices = [
     {
-      imgUrl: "drawings/1.jpeg",
+      imgUrl: "practices/1.jpg",
     },
     {
-      imgUrl: "drawings/2.jpeg",
+      imgUrl: "practices/2.jpg",
     },
     {
-      imgUrl: "drawings/3.jpeg",
+      imgUrl: "practices/3.jpg",
     },
     {
-      imgUrl: "drawings/4.jpeg",
+      imgUrl: "practices/4.jpg",
     },
     {
-      imgUrl: "drawings/5.jpeg",
+      imgUrl: "practices/5.jpg",
     },
     {
-      imgUrl: "drawings/6.jpeg",
+      imgUrl: "practices/6.jpg",
     },
     {
-      imgUrl: "drawings/7.jpeg",
+      imgUrl: "practices/7.jpg",
     },
     {
-      imgUrl: "drawings/8.jpeg",
+      imgUrl: "practices/8.jpg",
     },
     {
-      imgUrl: "drawings/9.jpeg",
+      imgUrl: "practices/9.jpg",
     },
     {
-      imgUrl: "drawings/10.jpeg",
+      imgUrl: "practices/10.jpg",
     },
     {
-      imgUrl: "drawings/11.jpeg",
+      imgUrl: "practices/11.jpg",
     },
     {
-      imgUrl: "drawings/12.jpeg",
-    },
-    {
-      imgUrl: "drawings/13.jpeg",
-    },
-    {
-      imgUrl: "drawings/14.jpeg",
-    },
-    {
-      imgUrl: "drawings/15.jpeg",
-    },
-    {
-      imgUrl: "drawings/16.jpeg",
-    },
-    {
-      imgUrl: "drawings/17.jpeg",
-    },
-    {
-      imgUrl: "drawings/18.jpeg",
+      imgUrl: "practices/12.jpg",
     },
   ];
   let imgsTag = [];
 
-  drawings.forEach(drawing => {
+  practices.forEach(drawing => {
     let img = $(` \
       <div>
         <a href="${drawing.imgUrl}">
@@ -82,8 +64,6 @@ $(document).ready(function () {
       </div>
     `);
     imgsTag.push(img);
-
   });
-
-  $("#paintingModalBody").append(imgsTag);
+  $("#practicesModalBody").append(imgsTag);
 });
