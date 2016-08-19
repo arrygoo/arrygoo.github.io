@@ -1,5 +1,3 @@
-
-$(document).ready(function () {
   "use strict";
   let sculptures = [
     {
@@ -57,7 +55,7 @@ $(document).ready(function () {
       imgUrl: "sculptures/18.jpeg",
     },
   ];
-  let imgsTag = [];
+  let scultptureImgsTag = [];
 
   sculptures.forEach(drawing => {
     let img = $(` \
@@ -81,8 +79,5 @@ $(document).ready(function () {
         <hr style="width: 50%; margin: 50px 0 50px 0  auto; text-align:center;"/>
       </div>
     `);
-    imgsTag.push(img);
+    scultptureImgsTag.push(img);
   });
-
-  $("#sculptureModalBody").append(imgsTag);
-});

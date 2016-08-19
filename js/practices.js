@@ -1,5 +1,3 @@
-
-$(document).ready(function () {
   "use strict";
   let practices = [
     {
@@ -21,7 +19,7 @@ $(document).ready(function () {
       imgUrl: "practices/6.jpg",
     },
   ];
-  let imgsTag = [];
+  var practicesImgsTag = [];
 
   practices.forEach(drawing => {
     let img = $(` \
@@ -45,7 +43,5 @@ $(document).ready(function () {
         <hr style="width: 50%; margin: 50px 0 50px 0  auto; text-align:center;"/>
       </div>
     `);
-    imgsTag.push(img);
+    practicesImgsTag.push(img);
   });
-  $("#practicesModalBody").append(imgsTag);
-});

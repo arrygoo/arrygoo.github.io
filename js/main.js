@@ -12,13 +12,20 @@ $(document).ready(function () {
     $("#" + modalName).modal("show");
   }
 
+  function enteredWebsite() {
+    $("#overlay, #overlay-back").fadeOut(2000);
+  }
+
   // Welcome message:
   $("#overlay, #overlay-back").on("click", function () {
-    $("#overlay, #overlay-back").fadeOut(1000);
+    enteredWebsite();
+    $("#practicesModalBody").append(practicesImgsTag);
+    $("#sculptureModalBody").append(drawingsImgsTag);
+    $("#paintingModalBody").append(scultptureImgsTag);
   });
 
   setTimeout(function () {
-    $("#overlay, #overlay-back").fadeOut(2000);
+    enteredWebsite();
   }, 8000);
 
   $("map").imageMapResize();

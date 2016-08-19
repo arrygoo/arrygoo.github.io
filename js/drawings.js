@@ -1,5 +1,3 @@
-
-$(document).ready(function () {
   "use strict";
   let drawings = [
     {
@@ -57,7 +55,7 @@ $(document).ready(function () {
       imgUrl: "drawings/18.jpeg",
     },
   ];
-  let imgsTag = [];
+  let drawingsImgsTag = [];
 
   drawings.forEach(drawing => {
     let img = $(` \
@@ -81,9 +79,5 @@ $(document).ready(function () {
         <hr style="width: 50%; margin: 50px 0 50px 0  auto; text-align:center;"/>
       </div>
     `);
-    imgsTag.push(img);
-
+    drawingsImgsTag.push(img);
   });
-
-  $("#paintingModalBody").append(imgsTag);
-});
