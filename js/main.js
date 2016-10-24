@@ -18,7 +18,7 @@ $(document).ready(function () {
   var practicesImgsTag = [];
 
   practices.forEach(function (drawing) {
-    var img = $("       <div>\n        <a class=\"fullsizeable\" href=\"" + drawing.imgUrl + "\">\n          <img title=\"" + (drawing.title || "") + "\"\n                alt=\"" + (drawing.title || "") + "\"\n                class=\"imageList\"\n                src=" + drawing.imgUrl + ">\n        </a>\n        <div>\n          <!--br/-->\n          <b>" + (drawing.title || "") + "</b>\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[0] || "") + "\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[1] || "") + "\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[2] || "") + "\n        </div>\n        <hr style=\"width: 50%; margin: 50px 0 50px 0  auto; text-align:center;\"/>\n      </div>\n    ");
+    var img = $("       <div>\n        <a class=\"fullsizable\" href=\"" + drawing.imgUrl + "\">\n          <img title=\"" + (drawing.title || "") + "\"\n                alt=\"" + (drawing.title || "") + "\"\n                class=\"imageList\"\n                src=" + drawing.imgUrl + ">\n        </a>\n        <div>\n          <!--br/-->\n          <b>" + (drawing.title || "") + "</b>\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[0] || "") + "\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[1] || "") + "\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[2] || "") + "\n        </div>\n        <hr style=\"width: 50%; margin: 50px 0 50px 0  auto; text-align:center;\"/>\n      </div>\n    ");
     practicesImgsTag.push(img);
   });
 
@@ -62,7 +62,7 @@ $(document).ready(function () {
   var drawingsImgsTag = [];
 
   drawings.forEach(function (drawing) {
-    var img = $("       <div>\n        <a class=\"fullsizeable\" href=\"" + drawing.imgUrl + "\">\n          <img title=\"" + (drawing.title || "") + "\"\n                alt=\"" + (drawing.title || "") + "\"\n                class=\"imageList\"\n                src=" + drawing.imgUrl + ">\n        </a>\n        <div>\n          <!--br/-->\n          <b>" + (drawing.title || "") + "</b>\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[0] || "") + "\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[1] || "") + "\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[2] || "") + "\n        </div>\n        <hr style=\"width: 50%; margin: 50px 0 50px 0  auto; text-align:center;\"/>\n      </div>\n    ");
+    var img = $("       <div>\n        <a class=\"fullsizble\" href=\"" + drawing.imgUrl + "\">\n          <img title=\"" + (drawing.title || "") + "\"\n                alt=\"" + (drawing.title || "") + "\"\n                class=\"imageList\"\n                src=" + drawing.imgUrl + ">\n        </a>\n        <div>\n          <!--br/-->\n          <b>" + (drawing.title || "") + "</b>\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[0] || "") + "\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[1] || "") + "\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[2] || "") + "\n        </div>\n        <hr style=\"width: 50%; margin: 50px 0 50px 0  auto; text-align:center;\"/>\n      </div>\n    ");
     drawingsImgsTag.push(img);
   });
 
@@ -106,7 +106,7 @@ $(document).ready(function () {
   var scultptureImgsTag = [];
 
   sculptures.forEach(function (drawing) {
-    var img = $("       <div>\n        <a class=\"fullsizeable\" href=\"" + drawing.imgUrl + "\">\n          <img title=\"" + (drawing.title || "") + "\"\n                alt=\"" + (drawing.title || "") + "\"\n                class=\"imageList\"\n                src=" + drawing.imgUrl + ">\n        </a>\n        <div>\n          <!--br/-->\n          <b>" + (drawing.title || "") + "</b>\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[0] || "") + "\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[1] || "") + "\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[2] || "") + "\n        </div>\n        <hr style=\"width: 50%; margin: 50px 0 50px 0  auto; text-align:center;\"/>\n      </div>\n    ");
+    var img = $("       <div>\n        <a class=\"fullsizble\" href=\"" + drawing.imgUrl + "\">\n          <img title=\"" + (drawing.title || "") + "\"\n                alt=\"" + (drawing.title || "") + "\"\n                class=\"imageList\"\n                src=" + drawing.imgUrl + ">\n        </a>\n        <div>\n          <!--br/-->\n          <b>" + (drawing.title || "") + "</b>\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[0] || "") + "\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[1] || "") + "\n          <!--br/-->\n          " + (drawing.lines && drawing.lines[2] || "") + "\n        </div>\n        <hr style=\"width: 50%; margin: 50px 0 50px 0  auto; text-align:center;\"/>\n      </div>\n    ");
     scultptureImgsTag.push(img);
   });
 
