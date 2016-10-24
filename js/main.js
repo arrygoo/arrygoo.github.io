@@ -132,6 +132,9 @@ $(document).ready(function () {
       $("#sculptureModalBody").append(scultptureImgsTag);
       $("#paintingModalBody").append(drawingsImgsTag);
     });
+    $("a.fullsizable").fullsizable({
+      detach_id: "container",
+    });
   }
 
   $("#cf7").imagesLoaded(function () {
@@ -152,6 +155,7 @@ $(document).ready(function () {
   $("a.fullsizable").fullsizable({
     detach_id: "container",
   });
+
   $(document).on("fullsizable:opened", function () {
     $("#jquery-fullsizable").swipe({
       swipeLeft: function swipeLeft() {
