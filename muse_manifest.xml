@@ -1,0 +1,49 @@
+<manifest alg="2" build="2017.0.2.363" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="baobab.letspanda.com" resolutions="1x,2x" timestamp="1494373372740">
+  <folder name="css">
+    <file name="site_global.css" crc="443350757"/>
+    <file name="index.css" crc="109131012" ref="index"/>
+    <file name="nomq_index.css" crc="3796204914" ref="index"/>
+    <file name="iefonts_index.css" crc="3824530138" ref="index"/>
+    <file name="thankyou.css" crc="3965574399" ref="thankyou"/>
+    <file name="nomq_thankyou.css" crc="368373809" ref="thankyou"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:thankyou"/>
+    <file name="museutils.js" crc="4232573551" ref="index:thankyou"/>
+    <file name="whatinput.js" crc="86476730" ref="index:thankyou"/>
+    <file name="museconfig.js" crc="4152223963" ref="index:thankyou"/>
+    <file name="webpro.js" crc="3770351119" ref="index"/>
+    <file name="form_check.php" crc="3841221102" ref="index"/>
+    <file name="form_throttle.php" crc="4048049783" ref="index"/>
+    <file name="form_process.php" crc="3899230280" ref="index"/>
+    <file name="form-u505.php" crc="397044640" ref="index"/>
+    <file name="jquery.watch.js" crc="3844535323" ref="index:thankyou"/>
+    <file name="jquery.museresponsive.js" crc="433634197" ref="index:thankyou"/>
+    <file name="require.js" crc="4234670167" ref="index:thankyou"/>
+  </folder>
+  <folder name="images">
+    <file name="a-master-favicon.ico" crc="3972214892" ref="index"/>
+    <file name="baobab_white.svg" crc="4227005940" seo="true" ref="index:thankyou">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="thankyou" alt=""/>
+      <caption webpage="thankyou" alt=""/>
+    </file>
+    <file name="baobab_white_poster_.png" crc="144213683" ref="index"/>
+    <file name="background.jpg" crc="3906122968" ref="index:thankyou">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="thankyou" alt=""/>
+      <caption webpage="thankyou" alt=""/>
+    </file>
+    <file name="background_2x.jpg" crc="238439482" ref="index:thankyou">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="thankyou" alt=""/>
+      <caption webpage="thankyou" alt=""/>
+    </file>
+    <file name="blank.gif" crc="4208392903" ref="index:thankyou"/>
+  </folder>
+  <file name="index.html" crc="4079989444" seo="true" mt="1494373051587" redirect="true"/>
+  <file name="thankyou.html" crc="4106489831" seo="true" mt="1494362378464" redirect="true"/>
+</manifest>
